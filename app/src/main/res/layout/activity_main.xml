@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/blue_50"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_open_book">
+
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            // password
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_background_text">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/main_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/grey_200"
+                    android:drawableLeft="@drawable/ic_person"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/grey_700"
+                    android:fontFamily="@font/sf_pro"
+                    android:hint="Username"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_700"
+                    android:textSize="17dp" />
+
+            </FrameLayout>
+
+
+            // password
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/login_background_text">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/main_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:drawablePadding="10dp"
+                    android:backgroundTint="@color/grey_200"
+                    android:paddingLeft="15dp"
+                    android:textColorHint="@color/grey_700"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:fontFamily="@font/sf_pro"
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:drawableTint="@color/grey_700"/>
+
+            </FrameLayout>
+
+
+
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/blue_50"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:cornerRadius="50dp"
+                android:stateListAnimator="@null"
+                android:fontFamily="@font/sf_pro"
+                android:drawableLeft="@drawable/ic_login"
+                android:drawableTint="@color/black">
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

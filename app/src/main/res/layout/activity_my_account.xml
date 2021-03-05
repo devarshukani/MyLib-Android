@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MyAccountActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pb_myaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ic_account"
+            android:layout_gravity="center"
+            app:tint="@color/blue_100" />
+
+        <TextView
+            android:id="@+id/tv_image_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textSize="80dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sf_pro"
+            android:paddingBottom="5dp"/>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Devarsh Ukani"
+        android:textSize="23dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sf_pro"
+        android:layout_margin="6dp">
+    </TextView>
+
+    // contact no
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact No"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7990638761"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // address
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="deva enfjsn f s sgf gs igshbgsi gsigs  s sis s  si is igsg s isgui sru sugssgiu s"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // issued books
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Issued Books"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_issuedbooks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // pending dues
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending Dues"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹"
+            android:textSize="19dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sf_pro"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_dues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textSize="19dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/red_100"
+        android:drawableLeft="@drawable/ic_logout"
+        android:fontFamily="@font/sf_pro"
+        android:stateListAnimator="@null"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:cornerRadius="50dp" />
+
+
+</LinearLayout>

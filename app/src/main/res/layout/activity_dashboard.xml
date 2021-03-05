@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.DashboardActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp">
+
+        <Button
+            android:id="@+id/btn_categories"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_50"
+            android:drawableTop="@drawable/ic_category"
+            android:drawableTint="@color/black"
+            android:elevation="10dp"
+            android:fontFamily="@font/sf_pro"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:stateListAnimator="@null"
+            android:padding="30dp"
+
+
+            android:text="Categories"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn_search"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue_50"
+            android:drawableTop="@drawable/ic_search"
+            android:drawableTint="@color/black"
+            android:elevation="10dp"
+            android:fontFamily="@font/sf_pro"
+            android:text="Search"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:stateListAnimator="@null"
+
+            android:padding="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            app:cornerRadius="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dashboard_bg"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_about"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:fontFamily="@font/sf_pro"
+            android:padding="20dp"
+
+            android:stateListAnimator="@null"
+            android:text="About Library"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            app:cornerRadius="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AboutLibraryActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+<!--    <ViewFlipper-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="230dp"-->
+<!--        android:id="@+id/v_flipper"-->
+<!--        android:layout_margin="10dp">-->
+
+<!--    </ViewFlipper>-->
+
+    <ViewFlipper
+        android:id="@+id/v_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:layout_margin="10dp"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Library"
+        android:textSize="20dp"
+        android:fontFamily="@font/sf_pro"
+        android:layout_marginLeft="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_50"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyLib Serves as knowledge hub containing resources as well as e-resources. In any Academic institution, Library plays an important role in the dissemination of knowledge and information. "
+            android:textSize="19dp"
+            android:fontFamily="@font/sf_pro"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Library Timing"
+        android:textSize="20dp"
+        android:fontFamily="@font/sf_pro"
+        android:layout_marginLeft="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/grey_50"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Monday To Friday :"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/sf_pro"
+                    android:layout_margin="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="10 am to 10 pm:"
+                    android:textSize="19dp"
+                    android:fontFamily="@font/sf_pro"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Saturday :"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/sf_pro"
+                    android:layout_margin="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="10 am to 3 pm:"
+                    android:textSize="19dp"
+                    android:fontFamily="@font/sf_pro"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

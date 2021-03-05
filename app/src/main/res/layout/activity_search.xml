@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SearchActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
+
+
+    // search edit text
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_background_text">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey_200"
+            android:drawableLeft="@drawable/ic_search_24"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/grey_700"
+            android:fontFamily="@font/sf_pro"
+            android:hint="Search for a Book..."
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey_700"
+            android:textSize="17dp"
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_rc_book" />
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/search_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>
