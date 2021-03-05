@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         et_id = findViewById(R.id.main_id);
         et_pass = findViewById(R.id.main_password);
+        //afdjasdf
 
         System.out.println(var);
 
