@@ -3,6 +3,7 @@ package com.sem6_project.mylib.Activity;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -11,6 +12,10 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.sem6_project.mylib.R;
+
+import org.w3c.dom.Text;
+
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 
 public class AboutLibraryActivity extends AppCompatActivity {
 
@@ -32,6 +37,10 @@ public class AboutLibraryActivity extends AppCompatActivity {
                 finish();
             }
         });
+        TextView tv_about = findViewById(R.id.tv_about);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            tv_about.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);
+        }
 
         v_flipper =findViewById(R.id.v_flipper);
 
