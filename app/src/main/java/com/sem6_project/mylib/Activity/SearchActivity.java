@@ -55,6 +55,14 @@ public class SearchActivity extends AppCompatActivity {
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("Search");
 
+        ImageView iv_backarrow = findViewById(R.id.iv_backarrow);
+        iv_backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         et_search = (EditText) findViewById(R.id.et_search);
         rv_CategoryList = (RecyclerView) findViewById(R.id.search_rc_book);
         bookbean = new ArrayList<>();

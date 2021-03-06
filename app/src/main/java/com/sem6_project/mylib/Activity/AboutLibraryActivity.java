@@ -25,6 +25,14 @@ public class AboutLibraryActivity extends AppCompatActivity {
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("About Library");
 
+        ImageView iv_backarrow = findViewById(R.id.iv_backarrow);
+        iv_backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         v_flipper =findViewById(R.id.v_flipper);
 
         int images[] = {R.drawable.pic1,R.drawable.pic2,R.drawable.pic3};

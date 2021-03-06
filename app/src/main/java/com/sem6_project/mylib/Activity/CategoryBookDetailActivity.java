@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,14 @@ public class CategoryBookDetailActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.abs_layout);
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("Book");
+
+        ImageView iv_backarrow = findViewById(R.id.iv_backarrow);
+        iv_backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         initialize();
 

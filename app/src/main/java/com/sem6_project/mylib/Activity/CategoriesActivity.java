@@ -55,6 +55,14 @@ public class CategoriesActivity extends AppCompatActivity {
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("Categories");
 
+        ImageView iv_backarrow = findViewById(R.id.iv_backarrow);
+        iv_backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         rv_CategoryList = (RecyclerView) findViewById(R.id.rv_CategoryList);
         cat = new ArrayList<>();

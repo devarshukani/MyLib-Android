@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,14 @@ public class MyAccountActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.abs_layout);
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("My Account");
+
+        ImageView iv_backarrow = findViewById(R.id.iv_backarrow);
+        iv_backarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         JSON_URL = JSON_URL + "\"" + var + "\"";
 
