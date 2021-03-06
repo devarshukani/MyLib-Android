@@ -22,7 +22,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final static String ip = "http://10.20.18.29/";
+    public final static String ip = "http://10.20.18.22/";
     Button btn_login;
     EditText et_id, et_pass;
     String json1 = ip + "mylib/json/user.php?id=";
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject userLoginArray = (JSONObject) response.get(0);
 
+//                    
                     if (Integer.parseInt(userLoginArray.getString("value")) == 1){
                         String id = et_id.getText().toString();
                         Intent in = new Intent(getApplicationContext(),DashboardActivity.class);
