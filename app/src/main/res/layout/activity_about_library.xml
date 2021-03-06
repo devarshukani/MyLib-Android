@@ -67,7 +67,8 @@
             android:textSize="19dp"
             android:fontFamily="@font/sf_pro"
             android:layout_margin="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
+        // :)
 
     </androidx.cardview.widget.CardView>
 
