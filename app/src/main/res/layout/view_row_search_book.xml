@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:textSize="17dp"
                 android:text="J K Rowling"
-                android:textColor="@color/black"
+                android:textColor="@color/grey_800"
                 android:layout_marginLeft="7dp"/>
 
         </LinearLayout>
@@ -113,7 +113,7 @@
                 android:layout_weight="1"
                 android:textSize="17dp"
                 android:text="Comic Books"
-                android:textColor="@color/black"
+                android:textColor="@color/grey_800"
                 android:layout_marginLeft="7dp"/>
 
         </LinearLayout>

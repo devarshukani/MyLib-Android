@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:text="Horror"
                 android:textSize="23dp"
-                android:textColor="@color/black"
+                android:textColor="@color/grey_800"
                 android:fontFamily="@font/sf_pro"
                 android:layout_marginLeft="7dp"
                 android:paddingRight="5dp">
