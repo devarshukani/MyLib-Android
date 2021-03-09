@@ -48,13 +48,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/search_rc_book" />
+        android:id="@+id/search_rc_book"
+        android:layout_marginBottom="5dp"/>
     <ProgressBar
         android:visibility="gone"
         android:id="@+id/search_progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"/>
 
 </LinearLayout>

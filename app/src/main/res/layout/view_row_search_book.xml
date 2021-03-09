@@ -10,9 +10,7 @@
     app:cardCornerRadius="10dp"
     app:cardUseCompatPadding="true"
     android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp">
+    android:layout_marginRight="10dp">
 
 
     <LinearLayout
@@ -26,19 +24,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_book"/>
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/tv_search_bookname"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="22dp"
-                android:text="Harry Potter"
-                android:gravity="center"
+                android:layout_marginLeft="7dp"
                 android:layout_marginBottom="10dp"
-                android:textColor="@color/black">
-            </TextView>
+                android:text="Harry Potter"
+                android:textColor="@color/black"
+                android:textSize="22dp"/>
 
         </LinearLayout>
 
@@ -46,14 +57,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="10dp">
+            android:layout_margin="5dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-  "
-                android:textColor="@color/black"
-                android:textSize="17dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_pen_tool"/>
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/tv_search_authorname"
@@ -62,9 +80,8 @@
                 android:layout_weight="1"
                 android:textSize="17dp"
                 android:text="J K Rowling"
-                android:textColor="@color/black"/>
-
-
+                android:textColor="@color/black"
+                android:layout_marginLeft="7dp"/>
 
         </LinearLayout>
 
@@ -72,14 +89,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="10dp">
+            android:layout_margin="5dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-  "
-                android:textColor="@color/black"
-                android:textSize="17dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:src="@drawable/ic_category"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_search_categoryname"
@@ -88,7 +113,8 @@
                 android:layout_weight="1"
                 android:textSize="17dp"
                 android:text="Comic Books"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:layout_marginLeft="7dp"/>
 
         </LinearLayout>
 

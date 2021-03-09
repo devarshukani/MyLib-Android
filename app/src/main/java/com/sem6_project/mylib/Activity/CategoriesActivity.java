@@ -2,6 +2,7 @@ package com.sem6_project.mylib.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -66,6 +67,8 @@ public class CategoriesActivity extends AppCompatActivity {
 
         rv_CategoryList = (RecyclerView) findViewById(R.id.rv_CategoryList);
         cat = new ArrayList<>();
+
+        //rv_CategoryList.setLayoutManager(new GridLayoutManager(this,2));
 
         extractCategory();
 
