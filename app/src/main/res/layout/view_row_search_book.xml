@@ -25,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -34,9 +35,9 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ic_book"/>
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_books_stack_of_three"/>
 
             </LinearLayout>
 
@@ -46,7 +47,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:layout_marginBottom="10dp"
                 android:text="Harry Potter"
                 android:textColor="@color/black"
                 android:textSize="22dp"/>
@@ -68,7 +68,8 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/ic_pen_tool"/>
+                android:src="@drawable/ic_person"
+                app:tint="@color/black" />
 
             </LinearLayout>
 
@@ -82,6 +83,18 @@
                 android:text="J K Rowling"
                 android:textColor="@color/grey_800"
                 android:layout_marginLeft="7dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:textSize="17dp"
+                android:text="Available"
+                android:textColor="@color/green_700"
+                android:layout_marginLeft="7dp"
+                android:gravity="right"
+                android:textStyle="bold"/>
+
 
         </LinearLayout>
 

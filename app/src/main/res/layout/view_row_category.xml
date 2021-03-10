@@ -32,7 +32,7 @@
             android:textSize="19dp"
             android:text="name"
             android:textColor="@color/black"
-            android:layout_gravity="center">
+            android:layout_marginLeft="7dp">
         </TextView>
 
     </LinearLayout>

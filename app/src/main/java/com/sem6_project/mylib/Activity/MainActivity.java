@@ -22,7 +22,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final static String ip = "http://10.20.18.29/";
+    public final static String ip = "http://169.254.7.124/";
     Button btn_login;
     EditText et_id, et_pass;
     String json1 = ip + "mylib/json/user.php?id=";
