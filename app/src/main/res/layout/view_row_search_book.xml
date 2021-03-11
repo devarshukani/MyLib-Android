@@ -85,12 +85,11 @@
                 android:layout_marginLeft="7dp"/>
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/tv_available"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.4"
                 android:textSize="17dp"
                 android:text="Available"
-                android:textColor="@color/green_700"
                 android:layout_marginLeft="7dp"
                 android:gravity="right"
                 android:textStyle="bold"/>

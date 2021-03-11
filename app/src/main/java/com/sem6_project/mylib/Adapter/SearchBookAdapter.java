@@ -2,6 +2,7 @@ package com.sem6_project.mylib.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,6 +61,14 @@ public class SearchBookAdapter extends RecyclerView.Adapter<SearchBookAdapter.Vi
 
             }
         });
+        if(Integer.parseInt(listdata.get(position).getBookQuantity()) > 0 ){
+            holder.tv_available.setText("Available");
+            holder.tv_available.setTextColor(Color.parseColor("#388E3C"));
+        }
+        else if(Integer.parseInt(listdata.get(position).getBookQuantity()) <= 0 ){
+            holder.tv_available.setText("Not Available");
+            holder.tv_available.setTextColor(Color.parseColor("#C62828"));
+        }
     }
 
     @Override
@@ -71,6 +80,7 @@ public class SearchBookAdapter extends RecyclerView.Adapter<SearchBookAdapter.Vi
 
         public TextView tv_search_bookname, tv_search_categoryname, tv_search_authorname, tv_search_bookid;
         public LinearLayout relativeLayout;
+        public TextView tv_available;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,6 +89,7 @@ public class SearchBookAdapter extends RecyclerView.Adapter<SearchBookAdapter.Vi
             this.tv_search_authorname = (TextView) itemView.findViewById(R.id.tv_search_authorname);
             this.tv_search_categoryname = (TextView) itemView.findViewById(R.id.tv_search_categoryname);
             this.relativeLayout = (LinearLayout) itemView.findViewById(R.id.search_book_linear);
+            tv_available = itemView.findViewById(R.id.tv_available);
         }
     }
 }
