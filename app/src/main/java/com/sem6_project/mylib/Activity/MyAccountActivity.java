@@ -2,8 +2,11 @@ package com.sem6_project.mylib.Activity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -17,21 +20,34 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.sem6_project.mylib.Adapter.IssueBookAdapter;
+import com.sem6_project.mylib.Adapter.SearchBookAdapter;
 import com.sem6_project.mylib.R;
 import com.sem6_project.mylib.appcontroller.AppController;
+import com.sem6_project.mylib.bean.Book;
+import com.sem6_project.mylib.bean.IssueBook;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 import static com.sem6_project.mylib.Activity.MainActivity.ip;
 import static com.sem6_project.mylib.Activity.MainActivity.var;
 
 public class MyAccountActivity extends AppCompatActivity {
 
+    RecyclerView rv_issuedbooks;
+    ArrayList<IssueBook> bookbean;
+    IssueBook bookdata;
     Button btn_logout;
     TextView tv_username, tv_image_character, tv_address, tv_contact, tv_dues, tv_issuedbooks;
     String JSON_URL = ip + "mylib/json/user_detail.php?id=";
+    String JSON_URL2 = ip + "mylib/json/issue_book.php?id=";
+    IssueBookAdapter adapter;
+
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +57,8 @@ public class MyAccountActivity extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.abs_layout);
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("My Account");
+        progressBar  = (ProgressBar) findViewById(R.id.pb_myaccount);
+        progressBar.setVisibility(View.VISIBLE);
 
         ImageView iv_backarrow = findViewById(R.id.iv_backarrow);
         iv_backarrow.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +68,16 @@ public class MyAccountActivity extends AppCompatActivity {
             }
         });
 
+        SharedPreferences sharedPreferences = getSharedPreferences("variable", MODE_PRIVATE);
+        var = sharedPreferences.getString("userid","");
+
+
         JSON_URL = JSON_URL + "\"" + var + "\"";
+
+        JSON_URL2 = JSON_URL2 + "\"" + var + "\"";
+
+        System.out.println(JSON_URL2);
+        bookbean = new ArrayList<>();
 
         initialize();
 
@@ -60,9 +87,19 @@ public class MyAccountActivity extends AppCompatActivity {
 
         image_character_get();
 
+        if (Integer.parseInt(tv_issuedbooks.getText().toString()) > 0){
+            issuebook();
+        }
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs",MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                boolean keeplogin = false;
+                editor.putBoolean("keeplogin",keeplogin);
+                editor.apply();
+
                 finishAffinity();
                 Intent in = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(in);
@@ -85,25 +122,25 @@ public class MyAccountActivity extends AppCompatActivity {
         tv_contact = findViewById(R.id.tv_contact);
         tv_dues = findViewById(R.id.tv_dues);
         tv_issuedbooks = findViewById(R.id.tv_issuedbooks);
+        rv_issuedbooks = findViewById(R.id.rv_issuedbooks);
     }
 
     public void accountInfo() {
-
-        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.pb_myaccount);
-        progressBar.setVisibility(View.VISIBLE);
 
         JsonArrayRequest req = new JsonArrayRequest(JSON_URL, new Response.Listener<JSONArray>() {
 
             @Override
             public void onResponse(JSONArray response) {
 //                Log.d(TAG, response.toString());
-                progressBar.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.GONE);
                 try {
                     JSONObject bookArray = (JSONObject) response.get(0);
                     tv_contact.setText(bookArray.getString("UserContactNumber"));
                     tv_address.setText(bookArray.getString("UserAddress"));
                     tv_issuedbooks.setText(bookArray.getString("NumberOfIssuedBooks"));
                     tv_dues.setText(bookArray.getString("PendingDues"));
+
+
 
                 }catch (JSONException e) {
                     e.printStackTrace();
@@ -119,7 +156,52 @@ public class MyAccountActivity extends AppCompatActivity {
         });
 
         AppController.getInstance().addToRequestQueue(req);
+    }
+
+    public void issuebook(){
+        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.pb_myaccount);
+       progressBar.setVisibility(View.VISIBLE);
+
+        JsonArrayRequest req = new JsonArrayRequest(JSON_URL2, new Response.Listener<JSONArray>() {
+
+            @Override
+            public void onResponse(JSONArray response) {
+//                Log.d(TAG, response.toString());
+               progressBar.setVisibility(View.GONE);
+                try {
+                    // Parsing json array response
+                    // loop through each json object
+                    JSONObject bookArray = (JSONObject) response.get(0);
+                    if (Integer.parseInt(bookArray.getString("ans").toString()) == 1){
+                        for (int i = 0; i < response.length(); i++) {
+
+                            JSONObject bookArray2 = (JSONObject) response.get(i);
+
+                            bookdata = new IssueBook(bookArray2.getString("UserID"), bookArray2.getString("IssueBookID"), bookArray2.getString("BookID"), bookArray2.getString("IssueBookDate"), bookArray2.getString("DueDate"), bookArray2.getString("BookName"));
+
+                            bookbean.add(bookdata);
+
+                        }
+                        IssueBookAdapter adapter1 = new IssueBookAdapter(bookbean, getApplicationContext());
+                        rv_issuedbooks.setHasFixedSize(true);
+                        rv_issuedbooks.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                        rv_issuedbooks.setAdapter(adapter1);
+                    }
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d("Error Avi", "Error: " + error.getMessage());
+                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
+        AppController.getInstance().addToRequestQueue(req);
     }
 }

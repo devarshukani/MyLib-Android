@@ -8,9 +8,7 @@
     app:cardBackgroundColor="@color/grey_50"
     app:cardElevation="5dp"
     app:cardCornerRadius="10dp"
-    app:cardUseCompatPadding="true"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    app:cardUseCompatPadding="true">
 
 
     <LinearLayout
@@ -69,7 +67,8 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:src="@drawable/ic_calendar"
-                    app:tint="@color/black" />
+                    app:tint="@color/black"
+                    android:padding="3dp"/>
 
             </LinearLayout>
 
@@ -95,7 +94,8 @@
                     android:layout_height="25dp"
                     android:backgroundTint="#FFFFFF"
                     android:src="@drawable/ic_timetable"
-                    app:tint="@color/black" />
+                    app:tint="@color/black"
+                    android:padding="3dp"/>
 
             </LinearLayout>
 
