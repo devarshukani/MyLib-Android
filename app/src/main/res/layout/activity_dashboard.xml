@@ -175,6 +175,7 @@
             android:fontFamily="@font/sf_pro"
             android:padding="20dp"
 
+
             android:drawableLeft="@drawable/ic_developer"
 
             android:stateListAnimator="@null"

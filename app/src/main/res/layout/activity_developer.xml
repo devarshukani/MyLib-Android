@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DeveloperActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -57,7 +58,7 @@
         app:cardCornerRadius="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        app:cardBackgroundColor="@color/blue_50">
+        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -181,7 +182,7 @@
         app:cardCornerRadius="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        app:cardBackgroundColor="@color/blue_50">
+        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
