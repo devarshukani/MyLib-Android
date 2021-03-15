@@ -23,7 +23,8 @@ import org.json.JSONObject;
 // pull test
 public class MainActivity<keeplogin> extends AppCompatActivity {
 
-    public final static String ip = "http://10.20.18.29/";
+    public final static String ip = "https://projectmylib.000webhostapp.com/";
+    //public final static String ip = "http://192.168.43.181/";
     Button btn_login;
     EditText et_id, et_pass;
     String json1 = ip + "mylib/json/user.php?id=";

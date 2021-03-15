@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyLib">
-        <activity android:name=".Activity.CategoryBookDetailActivity"></activity>
+        <activity android:name=".DeveloperActivity"></activity>
+        <activity android:name=".Activity.CategoryBookDetailActivity" />
         <activity android:name=".Activity.CategoryBookActivity" />
         <activity android:name=".Activity.AboutLibraryActivity" />
         <activity android:name=".Activity.CategoriesActivity" />

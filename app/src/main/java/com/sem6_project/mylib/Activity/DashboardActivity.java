@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sem6_project.mylib.DeveloperActivity;
 import com.sem6_project.mylib.R;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -19,6 +20,8 @@ public class DashboardActivity extends AppCompatActivity {
     Button btn_search;
     Button btn_categories;
     Button btn_about;
+    Button btn_developer;
+
 
 
 
@@ -33,6 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
         btn_search = findViewById(R.id.btn_search);
         btn_categories = findViewById(R.id.btn_categories);
         btn_about = findViewById(R.id.btn_about);
+        btn_developer = findViewById(R.id.btn_developer);
 
         iv_account.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +66,14 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getApplicationContext(),AboutLibraryActivity.class);
+                startActivity(in);
+            }
+        });
+
+        btn_developer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), DeveloperActivity.class);
                 startActivity(in);
             }
         });

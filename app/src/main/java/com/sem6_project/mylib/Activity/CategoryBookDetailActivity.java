@@ -87,7 +87,7 @@ public class CategoryBookDetailActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONArray response) {
 //                Log.d(TAG, response.toString());
-                progressBar.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.GONE);
                 try {
                     JSONObject bookArray = (JSONObject) response.get(0);
                     tv_book_name.setText(bookArray.getString("BookName"));
