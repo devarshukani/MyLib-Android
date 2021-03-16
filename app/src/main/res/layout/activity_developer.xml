@@ -149,7 +149,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Vishal Malwana"
+                        android:text="Prof. Vishal K. Makwana"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
                         android:textSize="16dp"/>
@@ -215,26 +215,32 @@
                     android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/tv_mail_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="186620307056@darshan.ac.in"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:autoLink="email"/>
                     <TextView
+                        android:id="@+id/tv_mail_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="186620307001@darshan.ac.in"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:autoLink="email"/>
                     <TextView
+                        android:id="@+id/tv_mail_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="186620307055@darshan.ac.in"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:autoLink="email"/>
 
                 </LinearLayout>
 
@@ -267,26 +273,32 @@
                     android:layout_marginLeft="10dp">
 
                     <TextView
+                        android:id="@+id/tv_number_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+91 7990638761"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:autoLink="phone"/>
                     <TextView
+                        android:id="@+id/tv_number_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+91 7041220538"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:autoLink="phone"/>
                     <TextView
+                        android:id="@+id/tv_number_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="+91 9104559910"
                         android:fontFamily="@font/sf_pro"
                         android:textColor="@color/black"
-                        android:textSize="16dp"/>
+                        android:textSize="16dp"
+                        android:autoLink="phone"/>
 
                 </LinearLayout>
 
