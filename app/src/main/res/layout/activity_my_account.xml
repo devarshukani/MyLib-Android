@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MyAccountActivity"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@drawable/background_gradient">
 
     <ProgressBar
         android:visibility="gone"
